@@ -1,0 +1,73 @@
+/* Ringlet website — "Cosmic gems" theme, matching the game. */
+:root {
+  --sky-top: #0b1030;
+  --sky-bottom: #1e0f3a;
+  --panel: rgba(18, 21, 56, 0.85);
+  --edge: rgba(128, 166, 255, 0.28);
+  --text: #f4f6ff;
+  --soft: #bfc8ff;
+  --accent: #5b6cff;
+  --gold: #ffd15c;
+  --radius: 18px;
+  --max: 880px;
+}
+* { box-sizing: border-box; }
+html { background: var(--sky-bottom); }
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background:
+    radial-gradient(1px 1px at 12% 18%, #fff8 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 72% 12%, #fffa 50%, transparent 51%),
+    radial-gradient(1px 1px at 40% 70%, #fff7 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 88% 55%, #fff9 50%, transparent 51%),
+    radial-gradient(1px 1px at 22% 88%, #fff6 50%, transparent 51%),
+    radial-gradient(1px 1px at 60% 38%, #fff6 50%, transparent 51%),
+    linear-gradient(180deg, var(--sky-top), var(--sky-bottom));
+  background-attachment: fixed;
+}
+a { color: var(--gold); }
+a:hover { color: #fff; }
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 16px; }
+
+header { padding: 20px 0; }
+header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-weight: 700; font-size: 22px; }
+.brand svg { width: 36px; height: 36px; }
+nav { display: flex; gap: 18px; flex-wrap: wrap; }
+nav a { color: var(--soft); text-decoration: none; font-weight: 600; }
+nav a:hover, nav a[aria-current="page"] { color: var(--text); }
+
+.hero { text-align: center; padding: 40px 0 24px; }
+.hero svg { width: min(320px, 80vw); height: auto; filter: drop-shadow(0 0 30px rgba(91, 108, 255, 0.45)); }
+.hero h1 { font-size: clamp(44px, 9vw, 76px); margin: 18px 0 4px; letter-spacing: -0.02em; text-shadow: 0 6px 30px rgba(90, 120, 255, 0.6); }
+.tagline { color: var(--soft); font-size: clamp(18px, 3vw, 22px); margin: 0 0 28px; }
+.badges { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+.badge {
+  display: inline-block; padding: 12px 22px; border-radius: 999px; font-weight: 700;
+  background: var(--panel); border: 1px solid var(--edge); color: var(--soft); text-decoration: none;
+}
+
+.card { background: var(--panel); border: 1px solid var(--edge); border-radius: var(--radius); padding: 24px; margin: 24px 0; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.grid .card { margin: 0; }
+.card h3 { margin: 0 0 6px; }
+.card p { margin: 0; color: var(--soft); }
+
+article h1 { font-size: clamp(32px, 6vw, 44px); margin: 24px 0 4px; }
+article h2 { margin-top: 32px; font-size: 22px; }
+article .meta { color: var(--soft); margin-top: 0; }
+article li { margin: 6px 0; }
+table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 15px; }
+th, td { text-align: left; padding: 10px; border-bottom: 1px solid var(--edge); vertical-align: top; }
+th { color: var(--soft); font-weight: 600; }
+.table-scroll { overflow-x: auto; }
+
+details { border-bottom: 1px solid var(--edge); padding: 12px 0; }
+summary { cursor: pointer; font-weight: 700; }
+details p { color: var(--soft); margin: 8px 0 0; }
+
+footer { color: var(--soft); font-size: 14px; padding: 40px 0; text-align: center; }
+footer a { color: var(--soft); }

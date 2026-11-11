@@ -1,0 +1,2 @@
+# app-ads.txt for Ringlet. Add the lines AppLovin MAX gives you after your account is approved
+# (MAX dashboard > Account > app-ads.txt), then publish. This file must sit at the root of your site.
